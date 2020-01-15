@@ -1,3 +1,13 @@
+<?php
+    require_once('./admin/functions.php');
+
+    // go and get the data from the database using our function
+    $planetCollection = getPlanetData($pdo);
+
+    // validate the results on the page
+    var_dump($planetCollection);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +25,11 @@
         <h2>The first three planets, closest to Sol:</h2>
 
         <!-- this is an inline php block -->
+        <?php foreach ($planetCollection as $planet) {
+            echo '<div class="planet">' . 
+                    '<img class="planet-img" src="' . $planet["IMGPATH"] . '" alt="planet image">' . $planet["NAME"] . ': ' . $planet["ID"] . '</h4>' . '<p class="planet-description">' . $planet["DESCRIPTION"] . '</p>' . '</div>';
+        } ?>
         
-
         <!-- end php block -->
     </main>
 </body>
