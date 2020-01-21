@@ -2,7 +2,7 @@
 
     $db_dsn = array(
         'host' => 'localhost',
-        'dbname' => 'week1php',
+        'dbname' => 'testWithVue',
         'charset' => 'utf8',
     );
     

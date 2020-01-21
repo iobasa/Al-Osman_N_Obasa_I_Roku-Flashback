@@ -7,10 +7,12 @@ var vm = new Vue({
 
     // mock up the user - this well eventually come from the database UMS (user management system)
     user: {
-      isAdmin: false,
-      avatar: null,
-      isLoggedIn: true
+      // isadmin: false,
+      // avatar: null,
+      // isLoggedIn: true
     }, // separate by a comma
+
+
 
 
     // this data would also come from the database, but we'll just mock it up for now
@@ -27,7 +29,18 @@ var vm = new Vue({
     showDetails: false
   },
 
+  created: function(){
+    // vue instance is ready to go, mostly - add some live data to the VM
+    console.log('created lifecycle hook fired, go get user data')
+    this.fetchUsers();
+  },
+
   methods: { 
+    logInOut() {
+
+    },
+
+
     setUserPrefs(){
       // this is the preferences control, hit the api when ready (or use a component)
       console.log('set user prefs here');
@@ -51,6 +64,23 @@ var vm = new Vue({
 
         // make the movie details show up
       this.showDetails = true;
+    },
+
+    fetchUsers() {
+      // get our user data here and push it back into the VM
+      console.log('fetch user data here');
+
+      const url = './admin/index.php?user=true';
+
+      fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+
+        // push our user data into the VM
+        this.user = data[0];
+      })
+      .catch((err) => console.log(err))
     }
   }
 });
