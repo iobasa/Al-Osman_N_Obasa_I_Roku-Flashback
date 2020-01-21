@@ -1,9 +1,9 @@
 <?php
     require('connect.php');
 
-    function getPlanetData($conn){
-        $getData = 'SELECT * FROM info';
-        $runQuery = $conn->query($getData);
+    function getUser($conn){
+        $getUser = 'SELECT * FROM users';
+        $runQuery = $conn->query($getUser);
 
         $result = array();
 
