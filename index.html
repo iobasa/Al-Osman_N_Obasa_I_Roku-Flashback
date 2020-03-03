@@ -20,8 +20,8 @@
         <ul>
           <!-- avatar / user icon-->
           <!-- if the user has an avatar, show it -->
-          <li v-if="user.avatar">
-            <img :src="'images/' + user.avatar" alt="user avatar" class="u-avatar">
+          <li v-if="user.settings.isLoggedIn">
+            <img :src=" 'images/' + user.avatar" alt="user avatar" class="u-avatar">
           </li>
 
           <!-- else show this -->
@@ -32,42 +32,39 @@
 
           <!-- settings icon / functionality -->
           <!-- if our user object has admin rights, then show this -->
-          <li v-if="user.isadmin">
+          <li v-if="user.settings.isadmin">
             <i v-on:click="setUserPrefs" class="fas fa-cog" role="button"></i>
           </li>
           <!-- end user settings -->
 
           <!-- log in / log out -->
           <li>
-            <i @click="userLogin" class="fas fa-power-off u-login" role="button" :class="{ 'logged-in' : user.isLoggedIn }"></i>
+            <i @click="userLogin" class="fas fa-power-off u-login" role="button" :class="{ 'logged-in' :user.isLoggedIn }"></i>
           </li>
         </ul>
       </nav>
     </header>
 
     <ul class="video-poster-wrapper">
-      <poster v-for="(movie, index) in videodata" v-on:make-selection="loadMovie"
-        :vidsource="movie.vidsource"
-        :thumb="movie.thumb"
-        :key="index">
-    </poster>
-      <!-- <li v-for="movie in videodata">
-        <a :href="movie.vidsource" @click.prevent="loadMovie(movie)">
-          <img :src="'images/' + movie.thumb" alt="movie poster">
+      <li v-for="movie in videodata">
+        <a :href="movie.vidsource" @click.prevent="showMovieDetails(movie)">
+            <img :src="'images/' + movie.thumb" alt="movie poster">
         </a>
-      </li> -->
+      </li>
     </ul>
 
     <p class="instructions">
       <i>Click on a poster to preview the movie!</i>
     </p>
 
-    <section class="hidden-movies" :class="{'show-movie' : showDetails}"> <!-- -->
-      <h3 class="movie-title">{{ videotitle }}</h3>
+   <section class="hidden-movies" :class="{'show-movie' : showDetails}">   
+      <!-- <h3 class="movie-title">{{ videotitle }}</h3>
       <video :src="'video/' + vidsource" controls autoplay></video>
       <div class="movie-details">
         <p>{{ videodescription }}</p>
-      </div>
+      </div> -->
+
+      <player v-bind:movie="movie" />
     </section>
 
     <div class="up-arrow"><span>^</span></div>
@@ -76,8 +73,7 @@
   <footer>
     <p>All content &copy; 2020 Netflix, Marvel and Disney, so don't tell them we stole it</p>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
-  <script defer src="js/main.js"></script> 
+  <script src="js/main.js"></script>
 </body>
 
 </html>
