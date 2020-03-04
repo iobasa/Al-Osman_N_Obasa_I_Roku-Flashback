@@ -5,5 +5,4 @@
         $user = getUser($pdo);
     }
 
-
     echo json_encode($user);
