@@ -1,93 +1,76 @@
-// todo => use a key to track the current video, or just pass the video in as a ref to the function and grab its source
+// create a couple of component we can request and render
+import landingComponent from "./components/landingComponent.js";
+import signUpComponent from "./components/signUpComponent.js";
+import loginComponent from "./components/loginComponent.js";
+import ErrorComponent from "./components/ErrorComponent.js";
+// these are the same as Express routes -> router.get('/', ... do something with the request)
 
-Vue.component('player', {
-  props: ['movie'],
+(() => {
+    let router = new VueRouter({
+        routes : [
+    { path: '/', name: 'landing', component: landingComponent },
+    { path: '/signUp', name: 'signUp', component: signUpComponent },
+    { path: '/login', name: 'login', component: loginComponent },
+    { path: '*', name: 'error', component: ErrorComponent }
+]
 
-  template: `
-  <div>
-    <h3 class="movie-title">{{ movie.videotitle }}</h3>
-    <video :src="'video/' + movie.vidsource" controls autoplay></video>
-    <div class="movie-details">
-      <p>{{ movie.videodescription }}</p>
-    </div>
-  </div>
-  `
-})
-
-
-var vm = new Vue({
-  el: "#app",
-
-  data: {
-
-    // mock up the user - this will eventually come from the database UMS (user management system)
-    user: {
-      isLoggedIn: true,
-      settings: {}
-    },
-
-    // this data would also come from the database, but we'll just mock it up for now
-    videodata: [
-      { name: "Star Wars The Force Awakens", thumb: "forceawakens.jpg", vidsource: "forceawakens.mp4", description: "yet another star wars movie" },
-      { name: "Stranger Things", thumb: "strangerthings.jpg", vidsource: "strangerthings.mp4", description: "don't get lost in the upside down" },
-      { name: "Marvel's The Avengers", thumb: "avengers.jpg", vidsource: "avengers.mp4", description: "will they make black widow action figures this time?" }
-    ],
-
-    movie: {
-    videotitle: "video title goes here",
-    vidsource: "",
-    videodescription: "video description here"
-    },
-
-    showDetails: false
-  },
-
-  created: function() {
-    // run a fetch call and get the user data
-    console.log('created lifecycle hook fired here, go get user data')
-    this.getUserData();
-  },
-
-  methods: {
-    getUserData() {
-      // do a fetch call here and get the user fro db
-      const url = './includes/index.php?getUser=1';
-
-      fetch(url) // get data from the DB
-      .then(res => res.json()) // translate JSON from DB to plain object
-      .then(data => { // use the plain data object (the user)
-        console.log(data); // log it to the concole (testing)
-
-        // put our DB data into Vue
-        this.user.settings = data[0];
-      })
-      .catch((error) => console.error(error))
-    },
-
-    setUserPrefs() {
-      // this is the preferences control, hit the api when ready ( or use a component)
-      console.log('set user prefs here');
-    },
-
-    userLogin() {
-      // call the login route, or load the login component
-      console.log('do login/ logout on click');
-
-      // this is a ternary statement -> shorthand for if/else
-      // the expression evaluates to true or false - if it's true, set the value equal to
-      // the left of the colon. if it;s false set the value equal to the right.
-      this.user.isLoggedIn = (this.user.isLoggedIn) ? false : true;
-    },
-
-    showMovieDetails({name, vidsource, description}) {
-      // console.log('show these details: ', movie);
-
-      this.movie.videotitle = name;
-      this.movie.vidsource = vidsource;
-      this.movie.videodescription = description;
-
-      // make the movie details show up
-      this.showDetails = true;
-    }
-  }
 });
+
+const vm = new Vue({
+
+    data: {
+      authenticated: false,
+      administrator: false,
+
+      mockAccount: {
+        username: "user",
+        password: "password"
+      },
+
+      user: [],
+
+      //currentUser: {},
+    },
+
+    created: function () {
+      // do a localstorage session check and set authenticated to true if the session still exists
+      // if the cached user exists, then just navigate to their user home page
+
+      // the localstorage session will persist until logout
+    },
+
+    methods: {
+      setAuthenticated(status, data) {
+        this.authenticated = status;
+        // handle implicit type coercion (bad, bad part of JS)
+        // turn our admin 1 or 0 back into a number
+        this.administrator = parseInt(data.isadmin);
+        this.user = data;
+      },
+
+      logout() {
+        // delete local session
+
+        // push user back to login page
+        this.$router.push({ path: "/login" });
+        this.authenticated = false;
+        this.administrator = false;
+      }
+    },
+
+    router: router
+  }).$mount("#app");
+
+  // add some router security here
+  router.beforeEach((to, from, next) => {
+    console.log('router guard fired');
+    // if the Vue authenticated property is set to false, then
+    // push the user back to the login screen (cuz they're not logged in)
+
+    if (vm.authenticated !== false) {
+      next("/login");
+    } else {
+      next();
+    }
+  })
+})();
