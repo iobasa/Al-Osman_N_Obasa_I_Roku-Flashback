@@ -1,8 +1,204 @@
+body {
+  font-family: sofia-pro, sans-serif;
+  background-color: #3B008B;
+  color: white; }
+
+label {
+  display: block;
+  margin-bottom: 20px; }
+
+input[type="submit"] {
+  display: block;
+  margin-top: 30px; }
+
+.header {
+  padding: 3%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #411264;
+  position: fixed;
+  z-index: +1; }
+
+#title {
+  margin-top: 13%;
+  margin-bottom: 10%; }
+
+#title h1 {
+  font-family: gopher, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 40px;
+  margin: 0 auto;
+  width: 60%; }
+
+input[type="text"] {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 1500;
+  font-style: normal;
+  text-align: center;
+  color: black; }
+
+#search-icon {
+  margin-left: -50%; }
+
+#user-icon {
+  margin-left: 40%; }
+
+.search {
+  float: right; }
+
+.signup {
+  text-decoration: none;
+  color: white; }
+
+.signup:hover {
+  text-decoration: none;
+  color: #FCA500; }
+
+.filter {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; }
+
+.filter-sections img {
+  font-size: 40px;
+  margin-top: 5%; }
+
+.filter-head {
+  font-family: gopher, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 40px;
+  margin-bottom: 5%; }
+
+.filter-head h1 {
+  font-size: 40px;
+  margin-bottom: 5%; }
+
+#check-out {
+  margin-top: 10%;
+  margin-bottom: 10%; }
+
+#check-out h2 {
+  font-family: gopher, sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  margin: 0 auto;
+  font-size: 30px;
+  width: 45%; }
+
+.filter-sections {
+  margin-bottom: 10%;
+  margin-left: 5%; }
+
+.more {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.more h3 {
+  font-family: gopher, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 25px;
+  text-align: center; }
+
+.more a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 20px;
+  margin-top: 5%; }
+
+.login {
+  margin: 0 auto;
+  padding: 2%;
+  color: white;
+  background-color: #6DCEAD; }
+
+.login:hover {
+  color: #6DCEAD;
+  background-color: white; }
+
+.login a {
+  text-align: center;
+  color: white; }
+
+.login-form {
+  display: flex;
+  justify-content: center; }
+
+#my-form {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 1500;
+  font-style: normal;
+  margin-top: 15%;
+  text-align: center;
+  margin-bottom: 15%; }
+
+#my-form label {
+  margin-top: 5%;
+  text-align: center; }
+
+#my-form input {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 1500;
+  font-style: normal;
+  text-align: center;
+  height: 20%;
+  margin-left: -100%;
+  width: 300%; }
+
+#my-form input[type=submit] {
+  width: 50%; }
+
+#sign {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 1500;
+  font-style: normal;
+  color: white;
+  background-color: #6DCEAD; }
+
+.footer {
+  background-color: #fff;
+  color: black; }
+
+.f-logo {
+  margin-top: 5%; }
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 4%;
+  margin-bottom: 5%; }
+
+.social-media {
+  margin-top: 5%; }
+
+.terms {
+  margin-top: 4%; }
+
+.terms li a {
+  text-decoration: none;
+  color: black; }
+
+.terms li {
+  list-style-type: none; }
+
+.copyright {
+  margin: 0 auto;
+  width: 71%;
+  padding-bottom: 5%; }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -12,281 +208,43 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+  display: block; }
+
 body {
-	line-height: 1;
-}
+  line-height: 1; }
+
 ol, ul {
-	list-style: none;
-}
+  list-style: none; }
+
 blockquote, q {
-	quotes: none;
-}
+  quotes: none; }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+  content: '';
+  content: none; }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 body {
-    font-family: sofia-pro, sans-serif;
-    background-color: #3B008B;
-    color: white;
-}
+  font-family: sofia-pro, sans-serif;
+  background-color: #3B008B;
+  color: white; }
 
-label{
-    display: block;
-    margin-bottom: 20px;
-}
-
-input[type="submit"]{
-    display: block;
-    margin-top: 30px;
-}
-
-.header {
-    padding: 3%;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #411264;
-    position: fixed;
-    z-index: +1;
-}
-
-#title {
-    margin-top: 13%;
-    margin-bottom: 10%;
-}
-
-#title h1{
-    font-family: gopher, sans-serif;
-font-weight: 900;
-font-style: normal ;
-font-size: 40px;
-margin: 0 auto;
-width: 60%;
-
-}
-
-input[type="text"]{
-    font-family: sofia-pro, sans-serif;
-font-weight: 1500;
-font-style: normal; 
-    text-align: center;
-    color: black; 
-}
-
-#search-icon {
-    margin-left: -50%;
-}
-
-#user-icon{
-    margin-left: 40%;
-}
-
-.search {
-    float: right;
-}
-
-.signup {
-    text-decoration: none;
-    color: white;
-}
-
-.signup:hover{
-    text-decoration: none;
-    color: #FCA500;
-}
-
-.filter{
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.filter-sections img{
-    font-size: 40px;
-    margin-top: 5%;
-}
-
-.filter-head{
-    font-family: gopher, sans-serif;
-    font-weight: 300;
-    font-style: normal ;
-    font-size: 40px;
-    margin-bottom: 5%;
-}
-
-.filter-head h1{
-    font-size: 40px;
-    margin-bottom: 5%;
-}
-
-#check-out{
-    margin-top: 10%;
-    margin-bottom: 10%;
-}
-
-#check-out h2{
-    font-family: gopher, sans-serif;
-font-weight: 500;
-font-style: italic;
-margin: 0 auto;
-font-size: 30px;
-width: 45%;
-}
-
-.filter-sections{
-    margin-bottom: 10%;
-    margin-left: 5%;
-}
-
-
-
-.more{
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.more h3{
-    font-family: gopher, sans-serif;
-    font-weight: 600;
-    font-style: normal ;
-font-size: 25px;
-text-align: center;
-}
-
-.more a{
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 20px;
-    margin-top: 5%;
-}
-
-.login {
-    margin: 0 auto;
-    padding: 2%;
-    color: white;
-    background-color: #6DCEAD;
-}
-
-.login:hover {
-    color: #6DCEAD;
-    background-color: white;
-}
-
-.login a{
-    text-align: center;
-    color: white;
-}
-
-.footer{
-    background-color: #fff;
-    color: black;
-}
-
-.f-logo{
-    margin-top: 5%;
-}
-
-.top{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 4%;
-    margin-bottom: 5%;
-}
-
-.social-media{
-    margin-top: 5%;
-}
-.terms{
-    margin-top: 4%;
-}
-
-.terms li a{
-    text-decoration: none;
-    color: black;
-
-}
-
-.terms li{
-    list-style-type: none;
-}
-
-.copyright{
-
-    margin: 0 auto;
-    width: 71%;
-    padding-bottom: 5%;
-}
-
-
-/***************************************************************************************/
-
-.login-form{
-    display: flex;
-    justify-content: center;
-}
-
-#my-form{
-    font-family: sofia-pro, sans-serif;
-    font-weight: 1500;
-    font-style: normal; 
-    margin-top: 15%;
-    text-align: center;
-    margin-bottom: 15%;
-}
-
-#my-form label{
-    margin-top: 5%;
-    text-align: center;
-}
-
-#my-form input{
-    font-family: sofia-pro, sans-serif;
-    font-weight: 1500;
-    font-style: normal; 
-    text-align: center;
-    height: 20%;
-    margin-left: -100%;
-    width: 300%;
-}
-
-#my-form input[type=submit] {
-    width: 50%;
-}
-
-#sign{
-    font-family: sofia-pro, sans-serif;
-    font-weight: 1500;
-    font-style: normal; 
-    color: white;
-    background-color: #6DCEAD;
-}
+/*# sourceMappingURL=main.css.map */

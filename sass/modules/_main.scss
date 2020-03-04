@@ -1,73 +1,157 @@
-* { border: 0; padding: 0; margin: 0; }
-
-html { position: relative; min-height: 100%; }
-
 body {
-	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-	background-color: black;
-	color: white;
-	margin-bottom: 100px;
-	background: url(../images/gunmetal.jpg) repeat;
+    font-family: sofia-pro, sans-serif;
+    background-color: #3B008B;
+    color: white;
 }
 
-a {
-	color: #00B7FF;
-	text-decoration: none;
+label{
+    display: block;
+    margin-bottom: 20px;
 }
 
-header {
-	background-color:$dark-bg;
-	padding: 12px 14px;
-	position: fixed;
-	z-index: 500;
-	width: 100%; 
-
-	span {
-		margin-left: 15px;
-		font-weight: bolder;
-		font-size: 1.5em;
-		text-transform: uppercase;
-		position: relative;
-		top: 5px;
-	}
+input[type="submit"]{
+    display: block;
+    margin-top: 30px;
 }
 
-nav:not(.side-nav) {
-	ul {
-		right: 3em;
-		list-style-type: none;
-		margin-bottom: 0;
-
-		li {
-			display: inline-block;
-			font-size: 1.75em;
-			padding: 0 0.2em;
-			cursor: pointer;
-		}
-	}
+.header {
+    padding: 3%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #411264;
+    position: fixed;
+    z-index: +1;
 }
 
-.toast {
-	position: absolute;
-	right: 1em;
-	top: 4.25rem;
-	z-index: 200;
-	color: #333;
-	min-width: 175px;
-
-	.toast-body {
-		span { margin-left: 0.8rem; position: relative; top: -2px; font-weight: bolder; }
-	}
+#title {
+    margin-top: 13%;
+    margin-bottom: 10%;
 }
 
-.fa-exclamation-triangle { color: red; font-size: 1.5em; }
+#title h1{
+    font-family: gopher, sans-serif;
+font-weight: 900;
+font-style: normal ;
+font-size: 40px;
+margin: 0 auto;
+width: 60%;
 
-.container > div:first-of-type { margin-top: 53px; }
-
-// resets for small sizes
-
-.display-4 {
-	font-size: 2.25rem;
 }
 
-.user-message { text-align: center; font-size: 2rem; }
+input[type="text"]{
+    font-family: sofia-pro, sans-serif;
+font-weight: 1500;
+font-style: normal; 
+    text-align: center;
+    color: black; 
+}
+
+#search-icon {
+    margin-left: -50%;
+}
+
+#user-icon{
+    margin-left: 40%;
+}
+
+.search {
+    float: right;
+}
+
+.signup {
+    text-decoration: none;
+    color: white;
+}
+
+.signup:hover{
+    text-decoration: none;
+    color: #FCA500;
+}
+
+.filter{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.filter-sections img{
+    font-size: 40px;
+    margin-top: 5%;
+}
+
+.filter-head{
+    font-family: gopher, sans-serif;
+    font-weight: 300;
+    font-style: normal ;
+    font-size: 40px;
+    margin-bottom: 5%;
+}
+
+.filter-head h1{
+    font-size: 40px;
+    margin-bottom: 5%;
+}
+
+#check-out{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+#check-out h2{
+    font-family: gopher, sans-serif;
+font-weight: 500;
+font-style: italic;
+margin: 0 auto;
+font-size: 30px;
+width: 45%;
+}
+
+.filter-sections{
+    margin-bottom: 10%;
+    margin-left: 5%;
+}
+
+
+
+.more{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.more h3{
+    font-family: gopher, sans-serif;
+    font-weight: 600;
+    font-style: normal ;
+font-size: 25px;
+text-align: center;
+}
+
+.more a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-top: 5%;
+}
+
+.login {
+    margin: 0 auto;
+    padding: 2%;
+    color: white;
+    background-color: #6DCEAD;
+}
+
+.login:hover {
+    color: #6DCEAD;
+    background-color: white;
+}
+
+.login a{
+    text-align: center;
+    color: white;
+}
