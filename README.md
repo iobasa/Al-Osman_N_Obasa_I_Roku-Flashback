@@ -1,4 +1,4 @@
-![Logo](/images/LOGO.svg)
+![Logo](/images/footer-logo.png)
 
 # Al-Osman_N_Obasa_I_Roku-Flashback
 Roku Flashback is an streaming app designed to display movies, tv shows and music from the 50's, 60's, 70's, 80's and 90's. It has different functionalities such as profiles that filter the content depending on the users age. 
