@@ -1,3 +1,5 @@
+[Flashback Logo](/images/footer-logo.png)
+
 # Roku Flashback Streaming App
 Indulge in some nostalgia today!
 Roku Flashback is an streaming app designed to display movies, tv shows and music from the 50's, 60's, 70's, 80's and 90's. It has different functionalities such as profiles that filter the content depending on the users age. 
@@ -35,8 +37,8 @@ localhost/Al-Osman_N_Obasa_I_Roku-Flashback
 
 ## Project Team
 
-- **Nour Al-Osman(Designer)
-- **Obasa Ifekitan (Developer)
+- Nour Al-Osman(Designer)
+- Obasa Ifekitan (Developer)
 
 ## Tools
 
@@ -60,7 +62,7 @@ localhost/Al-Osman_N_Obasa_I_Roku-Flashback
 
 * Icons downloaded for free from [Flaticon](https://www.flaticon.com)
 
-* [MySQL Connection Pooling](https://www.npmjs.com/package/mysql#pooling-connections)
+* Website SVG Background from [SVG Backgrounds](https://www.svgbackgrounds.com/)
 
 * Trevor Van Rys - Authoring Class
 
