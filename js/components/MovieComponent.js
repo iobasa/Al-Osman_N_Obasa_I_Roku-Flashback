@@ -1,13 +1,15 @@
 export default {
     name: "MovieComponent",
 
-    template: `
-    <section>
+    props: ['currentuser'],
 
-    <div>
+    template: `
+    <section class="bg-movie">
+
+    <div >
 
         <div class="main-h1">
-        <h1>Welcome Nour! What decade will you travel to today?</h1>
+        <h1>Welcome {{currentuser.username}}! What decade will you travel to today?</h1>
         </div>
 
 
@@ -48,8 +50,7 @@ export default {
             <div>
 
             <div type="button" data-toggle="modal" data-target="#exampleModalCenter1">
-            <div>
-            <img v-for="item in allRetrievedVideos" :src=" 'images/' + item.cover" alt="media thumb" @click="loadNewMovie(item)">
+            <img v-for="item in allRetrievedVideos" :src=" 'images/' + item.cover" alt="media thumb" @click="loadNewMovie(item)" class="media-thumb">
             </div>
             </div>
 

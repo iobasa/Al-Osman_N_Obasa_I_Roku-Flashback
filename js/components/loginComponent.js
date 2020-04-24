@@ -13,7 +13,8 @@ export default {
 
                             <button v-on:click.prevent="login()" type="submit" class="btn btn-light col-md-12">Log In</button>
                     </div>
-                </form>            
+                </form> 
+        <p class="display-2 text-center">Don’t have an account? <strong @click="navToUserHome()">Sign Up</strong></p>
             </div>
         </div>
      `,

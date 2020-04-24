@@ -1,13 +1,15 @@
 export default {
     name: "AudioComponent",
 
+    props: ['currentuser'],
+
     template: `
-    <section>
+    <section class="bg-music">
 
     <div>
 
         <div class="main-h1">
-        <h1>Welcome Nour! What decade will you travel to today?</h1>
+        <h1>Welcome dwd! What decade will you travel to today?</h1>
         </div>
 
 
@@ -49,7 +51,7 @@ export default {
 
             <div type="button" data-toggle="modal" data-target="#exampleModalCenter1">
             <div>
-            <img v-for="item in allRetrievedVideos" :src=" 'images/' + item.cover" alt="media thumb" @click="loadNewMovie(item)">
+            <img v-for="item in allRetrievedVideos" :src=" 'images/' + item.cover" alt="media thumb" @click="loadNewMovie(item)" class="media-thumb">
             </div>
             </div>
 
@@ -74,16 +76,12 @@ export default {
           
         
         <div class="row">
-        <div class="media-container">
-            <video autoplay controls muted :src=" 'video/' + currentMediaDetails.movies_trailer"  class="fs-video"></video>
-        </div>
 
         <div class="media-container row">
         <section class="media-sec col">
-            <h4 class="media-title">{{currentMediaDetails.movies_title}} ({{currentMediaDetails.movies_runtime}})</h4>
-            <span class="media-time">{{currentMediaDetails.movies_genre}}</span><br>
-            <span class="media-time">Rated: {{currentMediaDetails.movies_rating}}</span>
-            <p class="media-details" v-html="currentMediaDetails.movies_storyline"></p>
+        <img :src=" 'images/' + currentMediaDetails.cover" alt="media thumb" class="music-thumb">
+        <audio controls :src=" 'audio/' + currentMediaDetails.music_audio"  class="fs-audio"></audio>
+            <h4 class="media-title">{{currentMediaDetails.music_title}}</h4>
             </section>
 
             <section class="media-sec col">

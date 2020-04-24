@@ -4,13 +4,18 @@
 
 
 .display-4{
+    padding-top: 5%;
     text-align: center;
-    font-family: henderson-slab-basic, serif;
-font-weight: 400;
+    font-family: $font-two;
+font-weight: 700;
+font-size: 1.5rem;
 font-style: normal;
 }
 
 .login-form{
+    padding-top: 10%;
+    font-family: $font-one;
+    font-weight: 700;
     display: flex;
     justify-content: center;
 }
@@ -19,10 +24,14 @@ font-style: normal;
     border-radius: 0rem;
     margin-bottom: 2rem;
     text-align: center;
+    opacity: 1;
     color: black;
+    font-weight: 700;
 }
 
 .btn-light{
+    font-family: $font-one;
+    font-weight: 700;
     margin-top: 3rem;
     padding: .7rem;
     border-radius: 2rem;
