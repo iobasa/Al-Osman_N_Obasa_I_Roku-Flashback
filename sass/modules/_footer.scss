@@ -1,41 +1,28 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    // line-height: 60px;
+    background-color: $dark-bg;
 
-.footer{
-    background-color: #F2F2F2;
-    color: black;
-}
+    p { 
+        display: inline-block;
+        padding-left: 1em;
+        @include vertical-align();
+    }
 
-.f-logo{
-    margin-top: 5%;
-}
+	ul { 
+        list-style-type: none;
+        @include vertical-align();
+        margin-bottom: 0;
+        max-width: 95px;
 
-.top{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 4%;
-    margin-bottom: 5%;
-}
-
-.social-media{
-    margin-top: 5%;
-}
-.terms{
-    margin-top: 4%;
-}
-
-.terms li a{
-    text-decoration: none;
-    color: black;
-
-}
-
-.terms li{
-    list-style-type: none;
-}
-
-.copyright{
-
-    margin: 0 auto;
-    width: 71%;
-    padding-bottom: 5%;
+		li {
+			font-size: 2.5em;
+			display: inline-block;
+			margin-right: 0.4em;
+			color: rgba(255, 255, 255, 0.3);
+		}
+	}
 }
