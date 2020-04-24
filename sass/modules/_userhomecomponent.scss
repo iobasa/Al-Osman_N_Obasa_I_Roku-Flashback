@@ -1,0 +1,46 @@
+
+
+
+
+#title {
+    margin-top: 13%;
+    margin-bottom: 10%;
+}
+
+#title h1{
+    font-family: $font-two;
+font-weight: 900;
+text-align: center;
+font-style: normal ;
+font-size: 40px;
+margin: 0 auto;
+width: 70%;
+
+}
+
+.filter{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#check-out{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+#check-out h2{
+    font-family: gopher, sans-serif;
+font-weight: 500;
+font-style: italic;
+margin: 0 auto;
+font-size: 30px;
+width: 45%;
+}
+
+.icon p{
+    font-size: 2rem;
+    color: white;
+    font-weight: 500;
+}

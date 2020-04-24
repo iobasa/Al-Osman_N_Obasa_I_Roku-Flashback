@@ -1,0 +1,125 @@
+.fs-video { width: 100% }
+
+.media-container {
+    color: black;
+    background-color: #F2F2F2;
+    font-family: $font-one;
+    margin:0;
+}
+.media-container:first-of-type { padding-bottom: 1em; }
+.media-container:last-of-type { padding-left: 0; padding-right: 0; }
+
+// top left media details
+.media-title { 
+    font-size: 1.5em; 
+    padding-top: 1em;
+    font-weight: bolder; 
+}
+
+.modal-body{
+    background-color: #F2F2F2;
+}
+
+.stars img{
+    width: 5%;
+}
+
+.media-details { font-size: 1.2em; padding: 0.5em 0; }
+
+.media-year, .media-time { font-size: 1em; }
+.media-year { display: block; float: right; }
+
+.side-nav { background: darken($dark-bg, 9%) }
+
+// left hand pad list -> audio, film television
+.media-type { 
+    list-style-type: none;
+    margin-bottom: 0;
+    
+    li { 
+        padding: 1rem;
+        cursor: pointer;
+        display: inline-block;
+        width: 33%;
+        text-align: center;
+
+        span:first-of-type {  
+            font-size: 2rem; 
+            color: white;
+        }
+    }
+
+    li:hover span:first-of-type { color: $roku-purple }
+}
+
+// genre filter links
+
+.media-genres {
+    list-style-type: none;
+    background: $aqua;
+    margin: 0;
+
+    li { 
+        display: inline-block;
+        padding: .5em .5em .5em .5em;
+        font-weight: 700;
+            font-size: 1.5rem;
+            color: white;
+
+        a {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+        }
+        
+        p{
+            margin-bottom: 0rem;
+        }
+        
+        a:hover { color: $roku-purple; }
+    }
+}
+
+// media thumbnails
+.media-info {
+    padding-left: 0;
+    padding-right: 0;
+
+    > div { padding: 0 10px; }
+}
+
+.media-thumb {
+    height: 140px;
+    margin: 0.7em;
+}
+
+.audio-thumb { height: 150px; }
+
+.audio-wrapper {
+    background: $dark-bg;
+
+    img { max-width: 85%; display: block; margin: 0 auto; padding: 4% }
+
+}
+
+audio {
+    width: 70%;
+    margin: 0 13%;
+    position: absolute;
+    bottom: 12%;
+    opacity: 0.8;
+}
+
+
+.main-h1{
+    height: 40vh;
+}
+
+.main-h1 h1{
+    margin-top: 10%;
+    font-weight: 700;
+    margin-left: 3%;
+    font-size: 3.5rem;
+    color: black;
+}
