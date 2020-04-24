@@ -1,4 +1,4 @@
-[Flashback Logo](/images/footer-logo.png)
+![Flashback Logo](/images/footer-logo.png)
 
 # Roku Flashback Streaming App
 Indulge in some nostalgia today!
