@@ -1,5 +1,6 @@
-import MovieComponent from './MovieComponent.js';
-import AudioComponent from './AudioComponent.js';
+import MovieKidsComponent from './MovieKidsComponent.js';
+import TvKidsComponent from './TvKidsComponent.js';
+import AudioKidsComponent from './AudioKidsComponent.js';
 
 export default {
     name: "TheUserHomeComponent",
@@ -8,33 +9,38 @@ export default {
 
     template: `
 <div class="container">
-<component :is="this.activeComponent"></component>
+
 
 <!-- show media icons here -->
 <div class="row"> <!-- 2-up for nav and media info -->
-    <nav class="col-12 col-sm-3 side-nav">
-        <ul class="media-type">
+<section class="filter row">
+
+
             <li v-for="media in mediaTypes" :data-type="media.description" @click="switchMedia(media.component)">
-                <span>
-                    <i v-bind:class="[media.iconClass]"></i>
-                </span>
+            <section class="icon-kids text-center col-sm">
+                <a href="movie" @click.prevent="filterMedia('movies')"><img v-bind:src="[media.iconClass]" alt="movies"></a>
                 
-                <span class="d-none d-md-block">{{ media.description }}</span>
+                
+                <p class="d-none d-md-block">{{ media.description }}</p>
+                </section>
             </li>
-        </ul>
-    </nav>
+
+            </section>
+
 </div>
+
+<component :is="this.activeComponent"></component>
 </div>
     `,
 
     data: function() {
         return {
-            activeComponent: MovieComponent,
+            activeComponent: MovieKidsComponent,
             
             mediaTypes: [
-                { iconClass: "fas fa-film", description: "Movies", component: MovieComponent },
-                { iconClass: "fas fa-tv", description: "Television", component: MovieComponent },
-                { iconClass: "fas fa-headphones", description: "Music", component: AudioComponent },
+                { iconClass: "images/movie-icon.png", description: "Movies", component: MovieKidsComponent },
+                { iconClass: "images/tv-iconKids.png", description: "TV", component: TvKidsComponent },
+                { iconClass: "images/music-icon.png", description: "Music", component: AudioKidsComponent },
             ]
         }
     },

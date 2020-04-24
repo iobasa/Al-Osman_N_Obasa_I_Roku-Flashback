@@ -16,9 +16,9 @@ import AudioComponent from './components/AudioComponent.js';
       { path: '/users', name: 'users', component: AllUsersComponent },
       { path: '/userhome', name: 'home', component: UserHomeComponent, props: true },
       { path: '/entry', name: 'entry', component: EntryPointComponent, props: true },
-      { path: '/movie', name: 'movie', component: MovieComponent},
-      { path: '/tv', name: 'tv', component: TvComponent},
-      { path: '/music', name: 'music', component: AudioComponent},
+      { path: '/movie', name: 'movie', component: MovieComponent, props: true },
+      { path: '/tv', name: 'tv', component: TvComponent, props: true },
+      { path: '/music', name: 'music', component: AudioComponent, props: true },
     ]
   });
 
@@ -27,6 +27,8 @@ import AudioComponent from './components/AudioComponent.js';
       authenticated: false,
       administrator: false,
       user: [],
+
+      comment: '',
 
       //currentUser: {},
     },
@@ -57,7 +59,7 @@ import AudioComponent from './components/AudioComponent.js';
 
           this.authenticated = true;
 
-          this.$router.push({ name: "home", params: { currentuser: user }});
+          this.$router.push({ name: "entry", params: { currentuser: user }});
         } else {
           this.$router.push({ name: "login" });
         }

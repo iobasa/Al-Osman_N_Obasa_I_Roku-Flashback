@@ -1,45 +1,9 @@
 export default {
-    name: "TvComponent",
-
-    props: ['currentuser'],
+    name: "AudioKidsComponent",
 
     template: `
-    <section class="bg-tv">
+    <section>
 
-    <div >
-
-        <div class="main-h1">
-        <h1>Welcome dcsdc! What decade will you travel to today?</h1>
-        </div>
-
-
-    </div>
-
-        <div class="media-info">
-            <ul class="media-genres">
-            <li>
-                <p>Filter by Decade:</p>
-                </li>
-                <li>
-                    <a href="50s" @click.prevent="filterMedia('5')">1950's</a>
-                </li>
-                <li>
-                    <a href="60s" @click.prevent="filterMedia('6')">1960's</a>
-                </li>
-                <li>
-                    <a href="70s" @click.prevent="filterMedia('7')">1970's</a>
-                </li>
-                <li>
-                    <a href="80s" @click.prevent="filterMedia('8')">1980's</a>
-                </li>
-                <li>
-                    <a href="90s" @click.prevent="filterMedia('9')">1990's</a>
-                </li>
-                <li>
-                    <a href="All" @click.prevent="retrieveVideoContent">All</a>
-                </li>
-            </ul>
-        </div>
 
     <div class="row">
         <div class="col-12">
@@ -76,16 +40,12 @@ export default {
           
         
         <div class="row">
-        <div class="media-container">
-            <video autoplay controls muted :src=" 'video/' + currentMediaDetails.tv_trailer"  class="fs-video"></video>
-        </div>
 
         <div class="media-container row">
         <section class="media-sec col">
-            <h4 class="media-title">{{currentMediaDetails.tv_title}} ({{currentMediaDetails.tv_runtime}})</h4>
-            <span class="media-time">{{currentMediaDetails.tv_genre}}</span><br>
-            <span class="media-time">Rated: {{currentMediaDetails.tv_rating}}</span>
-            <p class="media-details" v-html="currentMediaDetails.tv_storyline"></p>
+        <img :src=" 'images/' + currentMediaDetails.cover" alt="media thumb" class="music-thumb">
+        <audio controls :src=" 'audio/' + currentMediaDetails.music_audio"  class="fs-audio"></audio>
+            <h4 class="media-title">{{currentMediaDetails.music_title}}</h4>
             </section>
 
             <section class="media-sec col">
@@ -138,7 +98,7 @@ export default {
         filterMedia(year){
             //debugger;
 
-            let url = `./admin/index.php?media=tv&adult=1&year=${year}`;
+            let url = `./admin/index.php?media=music&adult=0&year=${year}`;
 
             fetch(url)
                 .then(res => res.json())
@@ -152,7 +112,8 @@ export default {
         retrieveVideoContent() {
             // fetch all the video content here (don't care about filtering, genre etc at this point)
             //debugger;
-                let url = `./admin/index.php?media=tv&adult=1`;
+
+                let url = `./admin/index.php?media=music&adult=0`;
 
             fetch(url)
                 .then(res => res.json())
@@ -162,9 +123,9 @@ export default {
                     this.allRetrievedVideos = data;
                     this.currentMediaDetails = data[0];
                 })
-        },
 
             
+        },
 
         loadNewMovie(movie) {
             this.currentMediaDetails = movie;
