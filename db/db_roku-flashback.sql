@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 24, 2020 at 10:18 PM
+-- Generation Time: Apr 26, 2020 at 06:22 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -172,11 +172,8 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_avatar`, `user_permissions`, `user_admin`) VALUES
-(3, 'Trevor', 'user1', 'password', 'me@you.com', '2020-03-09 15:48:21', '::1', 'olaf', 5, 1),
-(4, 'Kate', 'user2', 'password', 'me@ou.com', '2020-03-09 15:49:04', 'no', 'null', 5, 1),
-(5, 'Madelaine', 'user3', 'password', 'me@you.com', '2020-03-09 15:49:39', 'no', 'null', 3, 0),
-(6, 'Isabelle', 'user4', 'password', 'me@you.com', '2020-03-09 15:50:13', 'no', 'null', 2, 0),
-(7, 'Serena', 'user5', 'password', 'me@you.com', '2020-03-09 15:50:48', '::1', 'null', 2, 0);
+(3, 'Nour', 'Nour', 'password', 'me@you.com', '2020-03-09 15:48:21', '::1', 'adult-user-big', 5, 1),
+(4, 'Ife', 'Ife', 'password', 'me@ou.com', '2020-03-09 15:49:04', 'no', 'kid-user-big', 2, 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
