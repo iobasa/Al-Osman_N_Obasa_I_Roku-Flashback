@@ -6,7 +6,7 @@ Roku Flashback is an streaming app designed to display movies, tv shows and musi
 
 
 
-### Getting Started and Installing
+## Getting Started and Installing
 
 1. Clone the repo
 ```sh
@@ -45,6 +45,15 @@ Password: password
 
 - Nour Al-Osman(Designer)
 - Obasa Ifekitan (Developer)
+
+## Design Reference
+Google Doc Link to Design Reference: https://docs.google.com/document/d/1YuRvZEl_hTYeYocIanfKNArZ9rwhEp55gGwzrEQsSCs/edit?usp=sharing
+
+## Development Reference
+Google Doc Link to Development Reference: https://docs.google.com/document/d/1brY2gxM1Z6vCK9ZCrIyw2TEDxVemCFl39X3tQXbfTUI/edit?usp=sharing
+
+## XD Prototype Link
+XD Prototype Link: https://xd.adobe.com/view/628e920b-f125-424f-7af1-45457f6208e9-14bf/
 
 ## Tools
 
