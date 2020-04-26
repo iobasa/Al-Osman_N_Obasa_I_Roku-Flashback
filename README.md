@@ -53,7 +53,7 @@ Google Doc Link to Design Reference: https://docs.google.com/document/d/1YuRvZEl
 Google Doc Link to Development Reference: https://docs.google.com/document/d/1brY2gxM1Z6vCK9ZCrIyw2TEDxVemCFl39X3tQXbfTUI/edit?usp=sharing
 
 ## XD Prototype Link
-XD Prototype Link: https://xd.adobe.com/view/628e920b-f125-424f-7af1-45457f6208e9-14bf/
+XD Prototype Link: https://xd.adobe.com/view/b3c938d7-f5d7-4285-42c6-9fd45d1144df-c5f8/
 
 ## Tools
 
