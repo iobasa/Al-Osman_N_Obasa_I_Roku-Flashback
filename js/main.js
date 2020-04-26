@@ -1,7 +1,6 @@
 
 import AllUsersComponent from './components/AllUsersComponent.js';
 import LoginComponent from './components/LoginComponent.js';
-import UserHomeComponent from './components/UserHomeComponent.js';
 import EntryPointComponent from './components/EntryPointComponent.js';
 import MovieComponent from './components/MovieComponent.js';
 import TvComponent from './components/TvComponent.js';
@@ -16,7 +15,6 @@ import SignUpComponent from './components/SignUpComponent.js';
       { path: '/login', name: "login", component: LoginComponent },
       { path: '/signup', name: "signup", component: SignUpComponent },
       { path: '/users', name: 'users', component: AllUsersComponent },
-      { path: '/userhome', name: 'home', component: UserHomeComponent, props: true },
       { path: '/entry', name: 'entry', component: EntryPointComponent, props: true },
       { path: '/movie', name: 'movie', component: MovieComponent, props: true },
       { path: '/tv', name: 'tv', component: TvComponent, props: true },
@@ -61,7 +59,7 @@ import SignUpComponent from './components/SignUpComponent.js';
 
           this.authenticated = true;
 
-          this.$router.push({ name: "users", params: { currentuser: user }});
+          this.$router.push({ name: "login", params: { currentuser: user }});
         } else {
           this.$router.push({ name: "login" });
         }

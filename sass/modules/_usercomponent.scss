@@ -36,7 +36,8 @@ font-style: normal;
 font-style: normal;
 }
 
-.alert {
-    font-size: 1.5rem;
-    color: white;
+.alert-type {
+    float: none;
+    font-size: 2rem;
+    color: $black;
 }
