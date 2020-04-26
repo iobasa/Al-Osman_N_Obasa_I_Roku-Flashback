@@ -1,15 +1,22 @@
+import FooterComponent from './FooterComponent.js';
+
 export default {
     name: "TvComponent",
 
-    props: ['currentuser'],
+    props: ['currentmedia'],
 
     template: `
     <section class="bg-tv">
 
+    <div class="buttons">
+    <div class="button" @click="navToBasics()"> Back to categories </div>
+
+    </div>
+
     <div >
 
         <div class="main-h1">
-        <h1>Welcome dcsdc! What decade will you travel to today?</h1>
+        <h1>Welcome {{currentmedia.username}}! What decade will you travel to today?</h1>
         </div>
 
 
@@ -92,20 +99,60 @@ export default {
             
             <section class="stars row">
             <p>Rating:</p>
-            <img class="col-sm-1" src="images/star.png" alt="star">
-            <img class="col-sm-1" src="images/star.png" alt="star">
-            <img class="col-sm-1" src="images/star.png" alt="star">
-            <img class="col-sm-1" src="images/star.png" alt="star">
-            <img class="col-sm-1" src="images/star-half.png" alt="star">
+            <img class="star col-sm-5" src="images/rating.png" alt="star">
             </section>
+            <br>
 
+            <section class="like row">
             <p>Like:</p>
 
-            <p>Share:</p>
+<div class="bs-example">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-link">
+            <input type="radio" name="options" autocomplete="off" checked> <img tabindex="1" src="images/thumbs-up-icon.svg" alt="star">
+        </label>
+        <label class="btn btn-link active">
+            <input type="radio" name="options" autocomplete="off"> <img tabindex="1" src="images/thumbs-down-icon.svg" alt="star">
+        </label>
+    </div>
+    </div>
+
+            </section>
+
+            <section class="row">
+            <p>Share:</p> 
+
+            <a class="btn btn-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <img  src="images/share-icon.svg" alt="star"> 
+            </a>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+            <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+          
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false"><img src="images/tweet.svg" alt="tweet" class="svg"></a>
+            
+            </div>
+          </div>
+          
+
+
+
+</section>
+
+
+    
+    
+
+            
+
+        
+            
 
             <label for="inputComment">Comment:</label>
     <input type="text" class="form-control" id="inputComment" placeholder="Write a Comment..">
     <button type="button" class="btn btn-warning">Submit</button>
+
+    
             
             </section>
         </div>
@@ -117,6 +164,8 @@ export default {
         </div>
         </div>
         </div>
+
+        <footers/>
 
 
 
@@ -168,6 +217,19 @@ export default {
 
         loadNewMovie(movie) {
             this.currentMediaDetails = movie;
+        },
+
+        navToBasics() {
+            //debugger;
+
+            localStorage.setItem("cachedUser", JSON.stringify(this.currentmedia));
+
+            //send this user to its home page , and pass the user object to the home page
+            this.$router.push({ name: "entry", params: { currentuser: this.currentmedia }})
         }
-    }
+    },
+
+    components: {
+        footers: FooterComponent ,
+      },
 }

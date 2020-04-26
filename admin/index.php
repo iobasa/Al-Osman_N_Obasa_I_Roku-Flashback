@@ -6,11 +6,11 @@
     }
 
     if (isset($_GET['adult'])) {
-        $adult = intval(trim($_GET["adult"]));
+        $adult = trim($_GET["adult"]);
     }
 
     if (isset($_GET['year'])) {
-        $year = intval(trim($_GET["year"]));
+        $year = trim($_GET["year"]);
 
         $results = getMoviesByYear($tbl, $adult, $year);
     echo json_encode($results);

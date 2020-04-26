@@ -54,34 +54,54 @@ export default {
             
             <section class="stars row">
             <p>Rating:</p>
-            <img class="col-sm-1" src="images/star.png" alt="star">
-            <img class="col-sm-1" src="images/star.png" alt="star">
-            <img class="col-sm-1" src="images/star.png" alt="star">
-            <img class="col-sm-1" src="images/star.png" alt="star">
-            <img class="col-sm-1" src="images/star-half.png" alt="star">
+            <img class="star col-sm-5" src="images/rating.png" alt="star">
             </section>
             <br>
-           
-            <div class="bs-example">
-           
+
+            <section class="like row">
+            <p>Like:</p>
+
+<div class="bs-example">
     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-    <p>Like: </p>
-        <label class="btn btn-success">
-            <input type="radio" name="options" autocomplete="off"> Like
+        <label class="btn btn-link">
+            <input type="radio" name="options" autocomplete="off" checked> <img tabindex="1" src="images/thumbs-up-icon.svg" alt="star">
         </label>
-        <label class="btn btn-danger">
-            <input type="radio" name="options" autocomplete="off" checked> Dislike
+        <label class="btn btn-link active">
+            <input type="radio" name="options" autocomplete="off"> <img tabindex="1" src="images/thumbs-down-icon.svg" alt="star">
         </label>
     </div>
-</div>
-<br>
-            
+    </div>
 
-            <p>Share:</p>
+            </section>
+
+            <section class="row">
+            <p>Share:</p> 
+
+            <a class="btn btn-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <img  src="images/share-icon.svg" alt="star"> 
+            </a>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+            
+            <h1 class="share">Hey there! Sorry you can't share!</h1>
+            
+            </div>
+          </div>
+          
+
+
+
+</section>
+        
+            
 
             <label for="inputComment">Comment:</label>
     <input type="text" class="form-control" id="inputComment" placeholder="Write a Comment..">
     <button type="button" class="btn btn-warning">Submit</button>
+
+    
+
+    
             
             </section>
         </div>

@@ -23,6 +23,12 @@ npm install
 localhost/Al-Osman_N_Obasa_I_Roku-Flashback
 ```
 
+5. Login Using these Credentials
+```sh
+Username: Nour
+Password: password
+```
+
 ### Dependencies
 
 * SASS

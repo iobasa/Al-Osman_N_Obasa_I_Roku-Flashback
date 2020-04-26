@@ -3,12 +3,27 @@ export default {
 
     template: `
     <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
-        <div @click="navToUserHome()">
-            <div class="user-profile text-center">
-                <img :src="'images/user/' + liveuser.avatar + '.jpg'">
-                <p>{{ liveuser.username }}</p>
-            </div>
-        </div>
+
+
+    <!-- button -->
+    <div>
+
+    <div type="button" data-toggle="modal" data-target="#exampleModalCenter3">
+
+    <div @click="navToUserHome()">
+    <div class="user-profile text-center">
+        <img :src="'images/user/' + liveuser.avatar + '.png'">
+        <p>{{ liveuser.username }}</p>
+    </div>
+</div>
+
+    
+    </div>
+    </div>
+
+    </div>
+
+       
     </div>`,
 
     created: function() {
