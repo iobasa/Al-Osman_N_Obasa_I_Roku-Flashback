@@ -27,9 +27,9 @@ export default {
     <div class="modal-content modal-body">
       
     <div class="adult-alert">
-      <h1>Hi There! {{currentuser.username}}, this is an adult account!<br><br> If you are a kid please navigate to a kids account by clicking here!</h1>
+      <h1>Hi There! {{currentuser.username}}, this is an adult account!<br><br> If you are a kid please navigate to a kids account by clicking <router-link class="btn btn-link close alert-type" data-dismiss="modal" to="/users" role="button">Here!</router-link></h1>
     
-      <router-link class="btn btn-dark close alert" data-dismiss="modal" to="/users" role="button">User Page</router-link>
+      
     
       <p>If not, please enjoy!!</p>
     </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 26, 2020 at 06:22 PM
+-- Generation Time: Apr 26, 2020 at 07:51 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -99,7 +99,7 @@ INSERT INTO `tbl_music` (`music_id`, `music_title`, `cover`, `year`, `isadult`, 
 (1, 'Don\'t Be Cruel\r\nElvis Presley', 'elvis-cover-50s.png', '1956', '0', 'dont-be-cruel.mp3'),
 (2, 'Walkin\' After Midnight\r\nPatsy Cline', 'patsy-cline-cover-50s.png', '1957', '0', 'walkin-after-midnight.mp3'),
 (3, 'I\'m A Believer\r\nThe Monkees', 'monkees-cover-60s.png', '1967', '0', 'im-a-believer.mp3'),
-(4, 'Dream A Little Dream Of Me\r\nElla & Louis', 'ella-louis-cover-60s.png', '1956', '0', 'dream-a-little-dream.mp3'),
+(4, 'Dream A Little Dream Of Me\r\nElla & Louis', 'ella-louis-cover-60s.png', '1966', '0', 'dream-a-little-dream.mp3'),
 (5, 'I Wanna Dance With Somebody\r\nWhitney Houston', 'whitney-cover-80s.png', '1987', '0', 'i-wanna-dance-with-somebody.mp3'),
 (6, 'Smooth Criminal\r\nMichael Jackson', 'michael-jackson-cover-80s.png', '1988', '0', 'smoothcriminal.mp3'),
 (7, 'Baby One More Time\r\nBritney Spears', 'britney-cover-90s.png', '1998', '0', 'baby-one-more-time.mp3'),

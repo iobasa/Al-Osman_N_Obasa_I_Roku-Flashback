@@ -104,9 +104,10 @@ nav:not(.side-nav) ul {
   font-size: 2rem;
   font-style: normal; }
 
-.alert {
-  font-size: 1.5rem;
-  color: white; }
+.alert-type {
+  float: none;
+  font-size: 2rem;
+  color: #302E33; }
 
 #title {
   margin-top: 8%;
