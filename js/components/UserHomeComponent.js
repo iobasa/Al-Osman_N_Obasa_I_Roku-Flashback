@@ -18,7 +18,7 @@ export default {
 
             <li v-for="media in mediaTypes" :data-type="media.description" @click="switchMedia(media.component)">
             <section class="icon-kids text-center col-sm">
-                <a href="movie" @click.prevent="filterMedia('movies')"><img v-bind:src="[media.iconClass]" alt="movies"></a>
+                <a :href="this.activeComponent"><img v-bind:src="[media.iconClass]" alt="movies"></a>
                 
                 
                 <p class="d-none d-md-block">{{ media.description }}</p>

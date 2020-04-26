@@ -3,8 +3,8 @@
 
 
 #title {
-    margin-top: 13%;
-    margin-bottom: 10%;
+    margin-top: 8%;
+    margin-bottom: 5%;
 }
 
 #title h1{
@@ -40,6 +40,7 @@ width: 45%;
 }
 
 .icon p{
+    font-family: $font-one;
     font-size: 2rem;
     color: white;
     font-weight: 500;
@@ -53,6 +54,38 @@ width: 45%;
 }
 
 .bs-example{
+    margin-left: 5%;
     display: flex;
     flex-direction: row;
+}
+
+.user-icon{
+    color: $black;
+}
+
+.user-icon:hover{
+    color: black;
+}
+
+.star{
+    width:50%;
+}
+
+.svg{
+    margin-top: 3%;
+    width: 20%;
+}
+
+.active{
+    background-color: $aqua;
+}
+
+.fb-comments{
+    width: 50%;
+    height: 30%;
+}
+
+.share{
+    color: $black;
+    font-size: 1.5rem;
 }

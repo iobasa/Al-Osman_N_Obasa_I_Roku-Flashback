@@ -6,6 +6,7 @@ import EntryPointComponent from './components/EntryPointComponent.js';
 import MovieComponent from './components/MovieComponent.js';
 import TvComponent from './components/TvComponent.js';
 import AudioComponent from './components/AudioComponent.js';
+import SignUpComponent from './components/SignUpComponent.js';
 
 (() => {
   let router = new VueRouter({
@@ -13,6 +14,7 @@ import AudioComponent from './components/AudioComponent.js';
     routes: [
       // { path: '/', redirect: { name: "login" } },
       { path: '/login', name: "login", component: LoginComponent },
+      { path: '/signup', name: "signup", component: SignUpComponent },
       { path: '/users', name: 'users', component: AllUsersComponent },
       { path: '/userhome', name: 'home', component: UserHomeComponent, props: true },
       { path: '/entry', name: 'entry', component: EntryPointComponent, props: true },
@@ -59,11 +61,13 @@ import AudioComponent from './components/AudioComponent.js';
 
           this.authenticated = true;
 
-          this.$router.push({ name: "entry", params: { currentuser: user }});
+          this.$router.push({ name: "users", params: { currentuser: user }});
         } else {
           this.$router.push({ name: "login" });
         }
     },
+
+    
 
     router: router
   }).$mount("#app");

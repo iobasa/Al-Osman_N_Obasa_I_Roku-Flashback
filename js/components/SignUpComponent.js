@@ -2,19 +2,19 @@ export default {
     template: `
         <div class="container">
             <div class="container">
-                <h1 class="display-4">Indulge in some nostalgia today!</h1>
+                <h1 class="display-4">Roku Flashback is your source for all retro media!</h1>
                 <form class="login-form">
                     <div class="form-row align-items-center col-md-6">
+
                             <label class="sr-only" for="inlineFormInputName">Name</label>
                             <input v-model="input.username" type="text" class="form-control form-control-lg" id="inlineFormInputName" placeholder="username" required>
 
                             <label class="sr-only" for="inlineFormPassword">Name</label>
                             <input v-model="input.password" type="password" class="form-control form-control-lg" id="inlineFormPassword" placeholder="password" required>
 
-                            <button v-on:click.prevent="login()" type="submit" class="btn btn-light col-md-12">Log In</button>
+                            <button v-on:click.prevent="register()" type="submit" class="btn btn-light col-md-12">Register</button>
                     </div>
                 </form> 
-        <p class="display-2 text-center">Don’t have an account? <router-link to="/signup" class="signup">SignUp</router-link></p>
             </div>
         </div>
      `,
@@ -30,9 +30,9 @@ export default {
     },
 
     methods: {
-        login() {
+        register() {
 
-            if (this.input.username != "" && this.input.password != "") {
+            if (this.input.username != "" && this.input.password != "" ) {
                 // fetch the user from the DB
                 // generate the form data
                 let formData = new FormData();
@@ -40,7 +40,7 @@ export default {
                 formData.append("username", this.input.username);
                 formData.append("password", this.input.password);
 
-                let url = `./admin/admin_login.php`;
+                let url = `./admin/admin_createuser.php`;
 
                 fetch(url, {
                     method: 'POST',
@@ -56,6 +56,7 @@ export default {
                             this.$emit("authenticated", true, data);
                             this.$router.replace({ name: "users" });
                         }
+                        
                     })
                     .catch(function (error) {
                         console.log(error);
